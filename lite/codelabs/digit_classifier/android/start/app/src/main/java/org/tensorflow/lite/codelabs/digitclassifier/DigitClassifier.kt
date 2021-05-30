@@ -63,7 +63,7 @@ class DigitClassifier(private val context: Context) {
     val model = loadModelFile(assetManager, "mnist.tflite")
 
     val options = Interpreter.Options()
-    //options.addDelegate(GpuDelegate())
+    options.addDelegate(GpuDelegate())
     //options.setUseNNAPI(true)
     val interpreter = Interpreter(model, options)
 
